@@ -1,0 +1,325 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="180e6973122c9cdd2884d890a7b0f4a30c978c84a81e2819990f0c586b9b87f0.html">Seleccionar Productos En Exito.Com</a></span>
+                > <span class="truncate-60"><a
+                    href="50d8de49607ba161d150ddb66ecb4e7f00b23bf401816889cf7d05e5f17b1701.html">Seleccionar productos </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 06-10-2023 21:31</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Seleccionar Productos En Exito.Com </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                yo como usuario de la pagina exito.com<br />
+quiero seleccionar cinco productos por distintas cantidades
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Seleccionar productos
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="aef01e10bef36255fbfd96d5c2927a30c404516c1df6e36dee0685165fce61ad.png" title=" Dado que estoy loggeado en la pagina" width="1920"/>
+                <img src="aef01e10bef36255fbfd96d5c2927a30c404516c1df6e36dee0685165fce61ad.png" title=" Valentina abrir pagina exito" width="1920"/>
+                <img src="aef01e10bef36255fbfd96d5c2927a30c404516c1df6e36dee0685165fce61ad.png" title=" Valentina opens the Abrir pagina" width="1920"/>
+                <img src="dd6e660366e3e96d82ab240d5f2dc7cf3d6ddb2684a943ab27b9424d3532d5cd.png" title=" Valentina opens the Abrir pagina (completed)" width="1920"/>
+                <img src="dd6e660366e3e96d82ab240d5f2dc7cf3d6ddb2684a943ab27b9424d3532d5cd.png" title=" Valentina abrir pagina exito (completed)" width="1920"/>
+                <img src="545ac0710bfcf6b8d9e51653e1b091da0d24b985807a8af66473d43272701c37.png" title=" Valentina iniciar sesion" width="1920"/>
+                <img src="545ac0710bfcf6b8d9e51653e1b091da0d24b985807a8af66473d43272701c37.png" title=" Valentina espera 5 segundo(s) antes de ejecutar el siguiente paso" width="1920"/>
+                <img src="c172c667f5ba8a614a84d736f15bedf2d2949c50ea403ae0853bb15738e3c1b2.png" title=" Valentina espera 5 segundo(s) antes de ejecutar el siguiente paso (completed)" width="1920"/>
+                <img src="d04ff67a0ffa81a42ed5945b31d7d264d4115e017d7ea1d7d88c6b6bec180e55.png" title=" Valentina clicks on Modal de publicidad" width="1920"/>
+                <img src="d38881026342c77aae0301446cb801cd98ceaa1c8fcf583a0625846d24f42a9e.png" title=" Valentina clicks on Modal de publicidad (completed)" width="1920"/>
+                <img src="d38881026342c77aae0301446cb801cd98ceaa1c8fcf583a0625846d24f42a9e.png" title=" Valentina clicks on Mi cuenta" width="1920"/>
+                <img src="23fc921b76dd670c49f420d4a3664d49c6ef3d305740e8d4eda9aa398ef82920.png" title=" Valentina clicks on Mi cuenta (completed)" width="1920"/>
+                <img src="660bab6098dbb2b369e6e8cff168d8df4aca9f8c9493761a97b317d76e9d39ae.png" title=" Valentina clicks on Opcion de ingreso" width="1920"/>
+                <img src="74ab3719e6547c89bd2bb3aa1cc1e2838e0a0a88271af7a17e625fb184b1151c.png" title=" Valentina clicks on Opcion de ingreso (completed)" width="1920"/>
+                <img src="74ab3719e6547c89bd2bb3aa1cc1e2838e0a0a88271af7a17e625fb184b1151c.png" title=" Valentina enters 'valentinamejiag@hotmail.com' into Opcion de ingreso" width="1920"/>
+                <img src="d541c07fa8f8804fb4449ee2f8620654db39939ed3da18422c3956310ba66f69.png" title=" Valentina enters 'valentinamejiag@hotmail.com' into Opcion de ingreso (completed)" width="1920"/>
+                <img src="d541c07fa8f8804fb4449ee2f8620654db39939ed3da18422c3956310ba66f69.png" title=" Valentina enters 'Valen123' into Opcion de ingreso" width="1920"/>
+                <img src="c9537570350c966e95af98652db0b6bea703f165e003d59f19f71150217b09c3.png" title=" Valentina enters 'Valen123' into Opcion de ingreso (completed)" width="1920"/>
+                <img src="c9537570350c966e95af98652db0b6bea703f165e003d59f19f71150217b09c3.png" title=" Valentina clicks on Opcion de ingreso" width="1920"/>
+                <img src="af96ca5c47c933fe0e9eaac9933d07349a9ba2daf8372eaf849d148a1c2f87ac.png" title=" Valentina clicks on Opcion de ingreso (completed)" width="1920"/>
+                <img src="af96ca5c47c933fe0e9eaac9933d07349a9ba2daf8372eaf849d148a1c2f87ac.png" title=" Valentina iniciar sesion (completed)" width="1920"/>
+                <img src="8c39235aa32be8f7132aeca89796d3a7ecb26e71acefdfb266342e5afc52e64a.png" title=" Dado que estoy loggeado en la pagina (completed)" width="1920"/>
+                <img src="8e414dd960b134c609f22f19d38536b1a940baf892ee7024bff3030bfc2c7050.png" title=" Cuando selecciono la categoria Tecnologia y la subcategoria Televisores" width="1920"/>
+                <img src="8e414dd960b134c609f22f19d38536b1a940baf892ee7024bff3030bfc2c7050.png" title=" Valentina seleccionar categoria" width="1920"/>
+                <img src="e06e24d031814929384f022a71d675927144ae7aef959141f1f31bb9ad4e11b9.png" title=" Valentina clicks on Menu" width="1920"/>
+                <img src="62b2ff5b5b0548530d6b0bbd4822f0d1a69256ed5107bbb39e634ee6dd7f40c5.png" title=" Valentina clicks on Menu (completed)" width="1920"/>
+                <img src="62b2ff5b5b0548530d6b0bbd4822f0d1a69256ed5107bbb39e634ee6dd7f40c5.png" title=" Valentina clicks on Categoria" width="1920"/>
+                <img src="1384b8ba85ef8f1b70b3904f9d8b7da5bc4770220e8cfb114c6daa8febaf8c16.png" title=" Valentina clicks on Categoria (completed)" width="1920"/>
+                <img src="1384b8ba85ef8f1b70b3904f9d8b7da5bc4770220e8cfb114c6daa8febaf8c16.png" title=" Valentina clicks on Subcategoria" width="1920"/>
+                <img src="c8ef0a9d34b3388cbc36eeeaa505cc716e33bbc658b9c25f6d7742da68d7345d.png" title=" Valentina clicks on Subcategoria (completed)" width="1920"/>
+                <img src="c8ef0a9d34b3388cbc36eeeaa505cc716e33bbc658b9c25f6d7742da68d7345d.png" title=" Valentina seleccionar categoria (completed)" width="1920"/>
+                <img src="c8ef0a9d34b3388cbc36eeeaa505cc716e33bbc658b9c25f6d7742da68d7345d.png" title=" Cuando selecciono la categoria Tecnologia y la subcategoria Televisores (completed)" width="1920"/>
+                <img src="38d08aed194d8a0ce0bc7a378209bf70e7d44f91d28f589b54997ea06ad4fc04.png" title=" Y selecciono los televisores de forma aleatoria y agrego cantidades diferentes a cada seleccion" width="1920"/>
+                <img src="38d08aed194d8a0ce0bc7a378209bf70e7d44f91d28f589b54997ea06ad4fc04.png" title=" Valentina seleccionar televisor aleatorio" width="1920"/>
+                <img src="80535f7015110703ba23c24d209110dfcc21e6113079adb2accd78548d6055d3.png" title=" Valentina espera 5 segundo(s) antes de ejecutar el siguiente paso" width="1920"/>
+                <img src="80a20f69d7474e5e32f7b5397e979080e4485d570ed772f1063b803a2e0182cc.png" title=" Valentina espera 5 segundo(s) antes de ejecutar el siguiente paso (completed)" width="1920"/>
+                <img src="8179f776d31b1a89759438bf6c9f4a87956bb01c53b05e5de1658fdf947abe70.png" title=" Valentina clicks on Bot&oacute;n comprar" width="1920"/>
+                <img src="1694bf50fdc44999fcd6b1ca338657dd016c55c176454a48386d4ec68089b511.png" title=" Valentina clicks on Bot&oacute;n comprar (completed)" width="1920"/>
+                <img src="85ba09afbf355e5ce238bfe516b5f91f73bd390d125af8d8e2d8607e3ea9092b.png" title=" Valentina clicks on Bot&oacute;n cantidad" width="1920"/>
+                <img src="03fa9799878bfa51dae953eb678d284c069654b9e9f1929d22760d14d46a4605.png" title=" Valentina clicks on Bot&oacute;n cantidad (completed)" width="1920"/>
+                <img src="d0e13491fe5c39da57df3b4836d980d9c11bb4be7744a35b96aabd60614c2142.png" title=" Valentina espera 5 segundo(s) antes de ejecutar el siguiente paso" width="1920"/>
+                <img src="7fbfd2bd141fc2acab74dc25aba820126995f54fa5b047997be95343cc9aae0f.png" title=" Valentina espera 5 segundo(s) antes de ejecutar el siguiente paso (completed)" width="1920"/>
+                <img src="6d0e7835c79060a8216670c1e5772a6531581ed3e6984d25eecf58c0459134d8.png" title=" Valentina espera 5 segundo(s) antes de ejecutar el siguiente paso" width="1920"/>
+                <img src="10bffcb901e448cc79885e25da013254d875d4acb0f4658af35dae28c72c333c.png" title=" Valentina espera 5 segundo(s) antes de ejecutar el siguiente paso (completed)" width="1920"/>
+                <img src="814d3b719090e78cc042d4f5c95a590b447b11fe066641f5ce6489f2d5aa8c39.png" title=" Valentina clicks on Bot&oacute;n comprar" width="1920"/>
+                <img src="8888ff002c8e3a5f2447fac0a9a7d5fa8448426882103abcb0591049ba3cc5d8.png" title=" Valentina clicks on Bot&oacute;n comprar (completed)" width="1920"/>
+                <img src="6c1af05ef59b6697e949eaf4567bf81644dbbfd4181d1eac81e772f2859dd153.png" title=" Valentina clicks on Bot&oacute;n cantidad" width="1920"/>
+                <img src="93e418c5c9d50e220ca03d0f9596d8507f5b0a28fa59f2c359856f26a4f29063.png" title=" Valentina clicks on Bot&oacute;n cantidad (completed)" width="1920"/>
+                <img src="93e418c5c9d50e220ca03d0f9596d8507f5b0a28fa59f2c359856f26a4f29063.png" title=" Valentina espera 5 segundo(s) antes de ejecutar el siguiente paso" width="1920"/>
+                <img src="648d853c3e6a5a055ceeb3173e6c29781384f9aee97d7dca55237c5640468e0e.png" title=" Valentina espera 5 segundo(s) antes de ejecutar el siguiente paso (completed)" width="1920"/>
+                <img src="bc88590a1dad7e0cf4aaf9a0d34176702453b0db459447a2fd9f30face941cc5.png" title=" Valentina espera 5 segundo(s) antes de ejecutar el siguiente paso" width="1920"/>
+                <img src="ab685435df4dc810e2392b51efa1e1ae171c3df180a17af3ce6482b99367940e.png" title=" Valentina espera 5 segundo(s) antes de ejecutar el siguiente paso (completed)" width="1920"/>
+                <img src="fde535e2b270899e2ffbb340cd2be407d79e44d0f33735914e7b0828ec9ab342.png" title=" Valentina clicks on Bot&oacute;n comprar" width="1920"/>
+                <img src="68c982858b83adbfd2949d202b31aa9eebabd721180af1ec512ed22c16fddb7e.png" title=" Valentina clicks on Bot&oacute;n comprar (completed)" width="1920"/>
+                <img src="beab5cbe1bd4223e30f57723e2aca4dc8d5aac013c9a752f4a77ee85aba823c8.png" title=" Valentina clicks on Bot&oacute;n cantidad" width="1920"/>
+                <img src="0ebfc2c1a73b01e683d53f2b44b1288ea44de6fb8469afb0616788a4514f23ff.png" title=" Valentina clicks on Bot&oacute;n cantidad (completed)" width="1920"/>
+                <img src="0ebfc2c1a73b01e683d53f2b44b1288ea44de6fb8469afb0616788a4514f23ff.png" title=" Valentina espera 5 segundo(s) antes de ejecutar el siguiente paso" width="1920"/>
+                <img src="7dfb9f3d2355b42fc871db7c340d8a283a6fa87c83a60b883ffb6e0ec33aba87.png" title=" Valentina espera 5 segundo(s) antes de ejecutar el siguiente paso (completed)" width="1920"/>
+                <img src="1ed106ba53fde2d7fc92adf94d7523b8226e3dce1e74b8be9da4e1771b08ff43.png" title=" Valentina clicks on Bot&oacute;n cantidad" width="1920"/>
+                <img src="9967470a70ee91ff860ce9a85d22f30fbadebbea0a35cdb241f99ee06fed1c6d.png" title=" Valentina clicks on Bot&oacute;n cantidad (completed)" width="1920"/>
+                <img src="9967470a70ee91ff860ce9a85d22f30fbadebbea0a35cdb241f99ee06fed1c6d.png" title=" Valentina espera 5 segundo(s) antes de ejecutar el siguiente paso" width="1920"/>
+                <img src="95ba256f0c8a3ed28d3bd7ab158c97238bda879498545e44c6d31354d1639768.png" title=" Valentina espera 5 segundo(s) antes de ejecutar el siguiente paso (completed)" width="1920"/>
+                <img src="4c54d175d322064baba935d1ddbf7d3c0c6b9988e0a613e673f3199f4caff47e.png" title=" Valentina clicks on Bot&oacute;n cantidad" width="1920"/>
+                <img src="d67ed0137ace173addb777e3b7db7a0bfffbb006bacc0b40e86ed9f7d2f44aab.png" title=" Valentina clicks on Bot&oacute;n cantidad (completed)" width="1920"/>
+                <img src="d67ed0137ace173addb777e3b7db7a0bfffbb006bacc0b40e86ed9f7d2f44aab.png" title=" Valentina espera 5 segundo(s) antes de ejecutar el siguiente paso" width="1920"/>
+                <img src="46b277c4cc0c50c03f8c315726a3c7d6127415fd39b8854a4100bf78d007ca48.png" title=" Valentina espera 5 segundo(s) antes de ejecutar el siguiente paso (completed)" width="1920"/>
+                <img src="d8f825f8ba73e13b4a41a1a781636e0cbe91c34254d0e56607957611ccb2d07f.png" title=" Valentina espera 5 segundo(s) antes de ejecutar el siguiente paso" width="1920"/>
+                <img src="b52b7f905fb7271a59341e32a337bc915c2f5183e205a1734e41eddacaf76e60.png" title=" Valentina espera 5 segundo(s) antes de ejecutar el siguiente paso (completed)" width="1920"/>
+                <img src="ce71000bec3bb05efb55c9a10bd6a0b2f0b9f002d0d7f5d2770afd88fcf636ae.png" title=" Valentina clicks on Bot&oacute;n comprar" width="1920"/>
+                <img src="906b6552db86cbd22f86bac77f02e72bef8ea49784c20a3ba7e6304108357688.png" title=" Valentina clicks on Bot&oacute;n comprar (completed)" width="1920"/>
+                <img src="8b2ad61ed0c7979dbabfe2c10616c148318a17570aac55c907c4fe83109e434d.png" title=" Valentina clicks on Bot&oacute;n cantidad" width="1920"/>
+                <img src="1e8e115368ca15dcc66010010886b0db44ec9abde096ad61560fdf260a5dbf03.png" title=" Valentina clicks on Bot&oacute;n cantidad (completed)" width="1920"/>
+                <img src="1e8e115368ca15dcc66010010886b0db44ec9abde096ad61560fdf260a5dbf03.png" title=" Valentina espera 5 segundo(s) antes de ejecutar el siguiente paso" width="1920"/>
+                <img src="7bbe4bfef339bc762c41f6a592a945d7b395f7583ea225162ecac8cc149f4116.png" title=" Valentina espera 5 segundo(s) antes de ejecutar el siguiente paso (completed)" width="1920"/>
+                <img src="292b2ef73536fa5a63f694dc5f8eb8d9fb15a03aa082118262afccc47b8b381c.png" title=" Valentina clicks on Bot&oacute;n cantidad" width="1920"/>
+                <img src="bdadf46137de94833a88ba972646a7e49d106640d2e04b1cb1cc5aa3af118831.png" title=" Valentina clicks on Bot&oacute;n cantidad (completed)" width="1920"/>
+                <img src="bdadf46137de94833a88ba972646a7e49d106640d2e04b1cb1cc5aa3af118831.png" title=" Valentina espera 5 segundo(s) antes de ejecutar el siguiente paso" width="1920"/>
+                <img src="39a455f96f04c4f7e7d6252132bb7b939f6bf7199e2271ce9e83e1cd97596454.png" title=" Valentina espera 5 segundo(s) antes de ejecutar el siguiente paso (completed)" width="1920"/>
+                <img src="9d109cf893caff04cf1e8d9c31d435ea140f8b9db6eaaff341b0b1d823bcebbb.png" title=" Valentina clicks on Bot&oacute;n cantidad" width="1920"/>
+                <img src="3707716368d80162172035d792c4b33b817c197f964848779ae7e3c9477f92bb.png" title=" Valentina clicks on Bot&oacute;n cantidad (completed)" width="1920"/>
+                <img src="3707716368d80162172035d792c4b33b817c197f964848779ae7e3c9477f92bb.png" title=" Valentina espera 5 segundo(s) antes de ejecutar el siguiente paso" width="1920"/>
+                <img src="ac1168fa7ff9cfe826f0238b77f4427cc255108944f824894b4b97b07bf0ad9b.png" title=" Valentina espera 5 segundo(s) antes de ejecutar el siguiente paso (completed)" width="1920"/>
+                <img src="5d7ec1af795538eec39cce161b244bcb3c7ae64c7cbe57fe1f8e8b6665539a9c.png" title=" Valentina espera 5 segundo(s) antes de ejecutar el siguiente paso" width="1920"/>
+                <img src="d079c4db738ee2414b3940f427a6e85af4f553b89e625e4c15dba177a8cfe7d6.png" title=" Valentina espera 5 segundo(s) antes de ejecutar el siguiente paso (completed)" width="1920"/>
+                <img src="d8f12e97282f95e3f3befa3901e048d49ba3b234c067b77eb8f7933e10562768.png" title=" Valentina clicks on Bot&oacute;n comprar" width="1920"/>
+                <img src="9dcbba869eca46152d2e8ddc8655168366ac6b05021c4036fc09776f85692e9f.png" title=" Valentina clicks on Bot&oacute;n comprar (completed)" width="1920"/>
+                <img src="1c72ce505aec38dc8709c999a7aaeb14c074eab086c54ba1dc2e6754a1da0caf.png" title=" Valentina clicks on Bot&oacute;n cantidad" width="1920"/>
+                <img src="36d65a2d6d91ab31ed560c3ce7c0975f06e414b40964fa936608868dc6a3ad4b.png" title=" Valentina clicks on Bot&oacute;n cantidad (completed)" width="1920"/>
+                <img src="36d65a2d6d91ab31ed560c3ce7c0975f06e414b40964fa936608868dc6a3ad4b.png" title=" Valentina espera 5 segundo(s) antes de ejecutar el siguiente paso" width="1920"/>
+                <img src="45bbca93077d3aa11bc1fc8b50a349b568b7fc19b5c78c5d32b060e54b2030fc.png" title=" Valentina espera 5 segundo(s) antes de ejecutar el siguiente paso (completed)" width="1920"/>
+                <img src="d04947bd7d60848f8848b5d2546521dcb40824ed28bcda85d62651b9f43790c6.png" title=" Valentina clicks on Bot&oacute;n cantidad" width="1920"/>
+                <img src="9c33f2d3775b22912c49744ddae0937274eee71126c52383f15fe6a274b7051d.png" title=" Valentina clicks on Bot&oacute;n cantidad (completed)" width="1920"/>
+                <img src="9c33f2d3775b22912c49744ddae0937274eee71126c52383f15fe6a274b7051d.png" title=" Valentina espera 5 segundo(s) antes de ejecutar el siguiente paso" width="1920"/>
+                <img src="677a9826cc646a6c36b054dd26d31526b3bfc1f87a19331fc3378cf6bd5fe577.png" title=" Valentina espera 5 segundo(s) antes de ejecutar el siguiente paso (completed)" width="1920"/>
+                <img src="f0825385ca4cde8bb23db678554bd9107994975a0ede407dd410947ac179925c.png" title=" Valentina seleccionar televisor aleatorio (completed)" width="1920"/>
+                <img src="f0825385ca4cde8bb23db678554bd9107994975a0ede407dd410947ac179925c.png" title=" Y selecciono los televisores de forma aleatoria y agrego cantidades diferentes a cada seleccion (completed)" width="1920"/>
+                <img src="f0825385ca4cde8bb23db678554bd9107994975a0ede407dd410947ac179925c.png" title=" Entonces Deberia visualizar los nombres precios cantidades y numero de productos: <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.6.0</span>
+</div>
+</body>
+</html>
